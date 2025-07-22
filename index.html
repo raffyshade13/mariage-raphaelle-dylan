@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raphaëlle & Dylan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to bottom, #fefae0, #fffdf6);
+      color: #2f3e46;
+    }
+    header {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1528825871115-3581a5387919');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3em;
+      margin: 0;
+    }
+    #countdown {
+      font-size: 1.5em;
+      margin-top: 20px;
+      color: #ffe8a3;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 10px;
+      color: #008080;
+    }
+    h3 {
+      color: #6a994e;
+    }
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+    form input, form select, form textarea, form button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    form button {
+      background-color: #008080;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    form button:hover {
+      background-color: #00665c;
+    }
+    .cagnotte {
+      background: linear-gradient(135deg, #e6f2ed, #c5f4e0);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .cagnotte a {
+      background: #2f3e46;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .sub-section {
+      margin-top: 20px;
+      padding-left: 10px;
+    }
+    ul li::marker {
+      color: #e76f51;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(to right, #2f3e46, #52796f);
+      color: white;
+    }
+  </style>
+  <script>
+    const weddingDate = new Date("2026-07-13T00:00:00").getTime();
+    setInterval(() => {
+      const now = new Date().getTime();
+      const distance = weddingDate - now;
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      document.getElementById("countdown").innerHTML = `${days}j ${hours}h ${minutes}m ${seconds}s avant le grand jour !`;
+    }, 1000);
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Raphaëlle CHARDON & Dylan TOILIBOU</h1>
+    <p>Vous invitent à célébrer leur union le</p>
+    <p>13 Juillet 2026</p>
+    <div id="countdown"></div>
+  </header>
+
+  <section id="programme">
+    <h2>🕒 Programme de la journée</h2>
+    <ul>
+      <li><strong>14h00</strong> - Arrivée des invités à l'Église Saint-Michel</li>
+      <li><strong>14h30</strong> - Cérémonie religieuse</li>
+      <li><strong>16h00</strong> - Départ pour le Domaine de la Belle Étoile</li>
+      <li><strong>17h00</strong> - Cocktail de bienvenue</li>
+      <li><strong>19h30</strong> - Dîner</li>
+      <li><strong>22h00</strong> - Soirée dansante</li>
+    </ul>
+  </section>
+
+  <section id="localisation">
+    <h2>📍 Lieux du mariage</h2>
+    <div class="sub-section">
+      <h3>📿 Cérémonie religieuse</h3>
+      <p>Église Saint-Michel, Pointe-à-Pitre, Guadeloupe</p>
+      <iframe src="https://www.google.com/maps?q=Église+Saint-Michel,+Pointe-à-Pitre&output=embed"></iframe>
+    </div>
+    <div class="sub-section">
+      <h3>🎉 Lieu des festivités</h3>
+      <p>Domaine de la Belle Étoile, Le Moule, Guadeloupe</p>
+      <iframe src="https://www.google.com/maps?q=Domaine+de+la+Belle+Étoile,+Le+Moule&output=embed"></iframe>
+    </div>
+  </section>
+
+  <section id="confirmation">
+    <h2>📋 Confirmation de présence</h2>
+    <p>Merci de confirmer votre présence avant le 1er mai 2026.</p>
+    <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST">
+      <input type="text" name="nom" placeholder="Nom et prénom" required>
+      <input type="number" name="nb_personnes" placeholder="Nombre de personnes" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Allergies ou remarques ?"></textarea>
+      <button type="submit">Confirmer</button>
+    </form>
+  </section>
+
+  <section id="cagnotte">
+    <h2>💌 Cagnotte pour la lune de miel</h2>
+    <div class="cagnotte">
+      <p>Si vous souhaitez nous aider à faire de notre lune de miel un rêve, vous pouvez contribuer à notre cagnotte :</p>
+      <a href="https://www.paypal.com/donate/?hosted_button_id=EXEMPLE" target="_blank">Participer à la cagnotte</a>
+    </div>
+  </section>
+
+  <section id="hebergement">
+    <h2>🏨 Hébergement</h2>
+    <p>Nous vous recommandons les hébergements suivants à proximité :</p>
+    <ul>
+      <li>Hôtel Amaudo - Saint-François</li>
+      <li>Villa Ti-Coco - Airbnb</li>
+      <li>La Créole Beach Hôtel & Spa</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Raphaëlle & Dylan © 2026</p>
+  </footer>
+</body>
+</html>
