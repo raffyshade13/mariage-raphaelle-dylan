@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raphaëlle & Dylan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(to bottom right, #e0f7e9, #fff4e6);
+      background-attachment: fixed;
+      color: #333;
+    }
+    section {
+      padding: 50px 20px;
+      animation: fadeIn 2s ease-in-out;
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 12px;
+      max-width: 900px;
+      margin: 30px auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    section:nth-child(even) {
+      background-color: rgba(254, 250, 224, 0.95);
+    }
+    h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.2em;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2a9d8f;
+    }
+    p, ul {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      margin: 10px 0;
+    }
+    iframe {
+      display: block;
+      margin: 30px auto 0 auto;
+      border: 0;
+      border-radius: 10px;
+      width: 90%;
+      height: 300px;
+    }
+    form {
+      max-width: 600px;
+      margin: 20px auto 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    textarea {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-family: 'Playfair Display', serif;
+      font-size: 1em;
+    }
+    button {
+      padding: 12px;
+      background-color: #2a9d8f;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1em;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #1f796f;
+    }
+    button.question-btn {
+      background-color: #e76f51;
+    }
+    button.question-btn:hover {
+      background-color: #be563f;
+    }
+    a.button {
+      display: inline-block;
+      background: #f4a261;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1em;
+      transition: background-color 0.3s ease;
+    }
+    a.button:hover {
+      background-color: #d48848;
+    }
+    header {
+      text-align: center;
+      padding: 50px 20px;
+    }
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      color: #264653;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      color: #264653;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Raphaëlle & Dylan</h1>
+  <p>Nous nous marions le 13 juillet 2026</p>
+</header>
+
+<nav>
+  <a href="#lieu" class="button">Lieu</a>
+  <a href="#confirmation" class="button">Confirmation</a>
+  <a href="#cagnotte" class="button">Cagnotte</a>
+  <a href="#hebergement" class="button">Hébergement</a>
+  <a href="#programme" class="button">Programme</a>
+  <a href="#questions" class="button">Une question ?</a>
+</nav>
+
+<section id="lieu">
+  <h2>Lieu de la Cérémonie</h2>
+  <p>La cérémonie religieuse aura lieu à <strong>l'Église Saint Michel, Lagrasse</strong> à 15h00. Un moment solennel et chaleureux au cœur de ce charmant village.</p>
+  <h2 style="margin-top: 50px;">Lieu des Festivités</h2>
+  <p>Rejoignez-nous ensuite pour célébrer dans un cadre verdoyant au <strong>La Bichonnière, Domaine des Vallons à Limoux</strong>, à partir de 18h00.</p>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2511.686275670236!2d2.420471415776535!3d43.15422847914069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b21708d07c9e41%3A0x8607f543baf6826a!2sLagrasse!5e0!3m2!1sfr!2sfr!4v1687885600000!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy"></iframe>
+</section>
+
+<section id="confirmation">
+  <h2>Confirmation de présence</h2>
+  <form action="mailto:raphaelleetdylan@gmail.com" method="POST" enctype="text/plain">
+    <input type="text" name="Nom et prénom" placeholder="Nom et prénom" required>
+    <input type="email" name="Email" placeholder="Adresse email" required>
+    <input type="number" name="Nombre de personnes" placeholder="Nombre de personnes présentes" required>
+    <textarea name="Message" placeholder="Message (optionnel)" rows="4"></textarea>
+    <button type="submit">Envoyer</button>
+  </form>
+</section>
+
+<section id="cagnotte">
+  <h2>Cagnotte de Lune de Miel</h2>
+  <p>Pour ceux qui souhaitent nous aider à réaliser notre rêve de voyage, une cagnotte est disponible ci-dessous.</p>
+  <div style="text-align: center; margin-top: 20px;">
+    <a href="#" class="button">Contribuer à notre voyage</a>
+  </div>
+</section>
+
+<section id="hebergement">
+  <h2>Hébergement</h2>
+  <p>Voici quelques options d'hébergement à proximité du lieu de la fête : hôtels, chambres d’hôtes et locations disponibles pour votre confort.</p>
+</section>
+
+<section id="programme">
+  <h2>Programme de la Journée</h2>
+  <ul>
+    <li>🕒 15h00 — Cérémonie religieuse à l'Église Saint Michel</li>
+    <li>🍹 17h30 — Cocktail d'accueil au Domaine des Vallons</li>
+    <li>🍽️ 19h30 — Dîner et festivités</li>
+    <li>💃 22h00 — Soirée dansante</li>
+  </ul>
+</section>
+
+<section id="questions">
+  <h2>Une question ?</h2>
+  <p>Vous avez une question sur le mariage, le lieu, les tenues ou autre ? Envoyez-nous un message !</p>
+  <form action="mailto:raphaelleetdylan@gmail.com" method="POST" enctype="text/plain">
+    <input type="text" name="Nom" placeholder="Votre nom" required>
+    <input type="email" name="Email" placeholder="Votre adresse email" required>
+    <textarea name="Question" placeholder="Votre question..." rows="4" required></textarea>
+    <button type="submit" class="question-btn">Envoyer la question</button>
+  </form>
+</section>
+
+<div style="text-align: center; margin: 30px auto;">
+  <a href="#questions" class="button">Poser une question</a>
+</div>
+
+</body>
+</html>
